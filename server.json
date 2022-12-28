@@ -5,7 +5,7 @@
       "description": "Desenvolvimento de site",
       "type": "income",
       "category": "Venda",
-      "price": 14000,
+      "price": 5000,
       "createdAt": "2022-12-28T11:12:01.857Z"
     },
     {
@@ -13,8 +13,16 @@
       "description": "Aluguel de apartamento",
       "type": "outcome",
       "category": "Casa",
-      "price": 1200,
+      "price": 400,
       "createdAt": "2022-04-10T11:12:01.857Z"
+    },
+    {
+      "id": 3,
+      "description": "Hambúrguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 20.30,
+      "createdAt": "2022-12-27T11:12:01.857Z"
     }
   ]
 }
