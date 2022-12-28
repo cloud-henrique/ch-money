@@ -20,7 +20,6 @@ export const NewTransactionButton = styled.button`
   border-radius: 6px;
   border: 0;
   color: ${({ theme }) => theme.white};
-  cursor: pointer;
   font-weight: bold;
   height: 50px;
   padding: 0 1.25rem;
