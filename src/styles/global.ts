@@ -23,10 +23,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
+    background: transparent;
+    border-radius: 6px;
+    border: 0;
     cursor: pointer;
 
     &:disabled {
       cursor: not-allowed;
     }
+  }
+
+  input {
+    border-radius: 6px;
+    border: 0;
   }
 `;

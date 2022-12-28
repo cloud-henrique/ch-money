@@ -6,8 +6,6 @@ export const SearchFormContainer = styled.form`
 
   input {
     background: ${({ theme }) => theme["gray-900"]};
-    border-radius: 6px;
-    border: 0;
     color: ${({ theme }) => theme["gray-300"]};
     flex: 1;
     padding: 1rem;
@@ -19,9 +17,6 @@ export const SearchFormContainer = styled.form`
 
   button {
     align-items: center;
-    background: transparent;
-    border-radius: 6px;
-    border: 0;
     border: 1px solid ${({ theme }) => theme["green-300"]};
     color: ${({ theme }) => theme["green-300"]};
     display: flex;

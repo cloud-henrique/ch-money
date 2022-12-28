@@ -17,8 +17,6 @@ export const HeaderContent = styled.div`
 
 export const NewTransactionButton = styled.button`
   background: ${({ theme }) => theme["green-500"]};
-  border-radius: 6px;
-  border: 0;
   color: ${({ theme }) => theme.white};
   font-weight: bold;
   height: 50px;
