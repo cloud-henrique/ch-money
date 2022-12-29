@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
 
     &:disabled {
       cursor: not-allowed;
+      opacity: 0.7;
     }
   }
 

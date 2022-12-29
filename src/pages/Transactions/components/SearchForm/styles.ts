@@ -25,7 +25,7 @@ export const SearchFormContainer = styled.form`
     padding: 1rem;
     transition: all 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${({ theme }) => theme["green-500"]};
       border-color: ${({ theme }) => theme["green-500"]};
       color: ${({ theme }) => theme.white};
