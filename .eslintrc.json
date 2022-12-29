@@ -1,3 +1,10 @@
 {
-  "extends": "@rocketseat/eslint-config/react"
+  "extends": "@rocketseat/eslint-config/react",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "max-len": ["error", { "code": 120, "tabWidth": 2 }],
+    "semi": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"]
+  }
 }

@@ -38,8 +38,6 @@ export const SummaryCard = styled.div<SummaryCardProps>`
   ${({ theme, variant }) =>
     variant &&
     css`
-      background: ${variant === 'green'
-        ? theme['green-700']
-        : theme['red-700']};
+      background: ${variant === 'green' ? theme['green-700'] : theme['red-700']};
     `}
 `

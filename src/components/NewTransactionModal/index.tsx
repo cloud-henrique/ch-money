@@ -2,18 +2,12 @@ import * as z from 'zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useContextSelector } from 'use-context-selector'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 
-import {
-  Overlay,
-  Content,
-  CloseButton,
-  TransactionType,
-  TransactionTypeButton,
-} from './styles'
-import { useContext } from 'react'
+import { Overlay, Content, CloseButton, TransactionType, TransactionTypeButton } from './styles'
 
 const newTransactionFormSchema = z.object({
   description: z.string(),
@@ -25,7 +19,7 @@ const newTransactionFormSchema = z.object({
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
 export function NewTransactionModal() {
-  const { createTransaction } = useContext(TransactionsContext)
+  const createTransaction = useContextSelector(TransactionsContext, context => context.createTransaction)
 
   const {
     control,
@@ -56,33 +50,15 @@ export function NewTransactionModal() {
         </CloseButton>
 
         <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
-          <input
-            required
-            type="text"
-            placeholder="Descrição"
-            {...register('description')}
-          />
-          <input
-            required
-            type="number"
-            placeholder="Preço"
-            {...register('price', { valueAsNumber: true })}
-          />
-          <input
-            required
-            type="text"
-            placeholder="Categoria"
-            {...register('category')}
-          />
+          <input required type="text" placeholder="Descrição" {...register('description')} />
+          <input required type="number" placeholder="Preço" {...register('price', { valueAsNumber: true })} />
+          <input required type="text" placeholder="Categoria" {...register('category')} />
 
           <Controller
             control={control}
             name="type"
             render={({ field }) => (
-              <TransactionType
-                onValueChange={field.onChange}
-                value={field.value}
-              >
+              <TransactionType onValueChange={field.onChange} value={field.value}>
                 <TransactionTypeButton variant="income" value="income">
                   <ArrowCircleUp size={24} />
                   Entrada
