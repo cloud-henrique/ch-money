@@ -10,8 +10,7 @@ export function useSummary() {
       if (current.type === "income") {
         acc.income += current.price;
         acc.total += current.price;
-      }
-      if (current.type === "outcome") {
+      } else {
         acc.outcome += current.price;
         acc.total -= current.price;
       }
