@@ -21,8 +21,32 @@
       "description": "Hambúrguer",
       "type": "outcome",
       "category": "Alimentação",
-      "price": 20.30,
+      "price": 20.3,
       "createdAt": "2022-12-27T11:12:01.857Z"
+    },
+    {
+      "category": "Equipamentos",
+      "description": "Fone de ouvido",
+      "price": 360,
+      "type": "outcome",
+      "createdAt": "2022-12-29T02:16:30.500Z",
+      "id": 4
+    },
+    {
+      "category": "Alimentação",
+      "description": "Janta",
+      "price": 29,
+      "type": "outcome",
+      "createdAt": "2022-12-29T02:18:55.135Z",
+      "id": 5
+    },
+    {
+      "description": "Identidade Visual Pulsatrix",
+      "price": 700,
+      "category": "Pulsatrix",
+      "type": "outcome",
+      "createdAt": "2022-12-29T02:41:42.802Z",
+      "id": 6
     }
   ]
 }

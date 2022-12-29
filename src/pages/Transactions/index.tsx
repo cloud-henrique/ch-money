@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
+
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 
 import {
@@ -10,16 +12,6 @@ import {
   TransactionsContainer,
   TransactionsTable,
 } from "./styles";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
-
-export interface TransactionProps {
-  id: number;
-  createdAt: string;
-  description: string;
-  price: number;
-  category: string;
-  type: "income" | "outcome";
-}
 
 export function Transactions() {
   const { transactions } = useContext(TransactionsContext);
