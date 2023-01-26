@@ -1,52 +1,28 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "description": "Desenvolvimento de site",
-      "type": "income",
+      "description": "Computador",
+      "price": 5400,
       "category": "Venda",
-      "price": 5000,
-      "createdAt": "2022-12-28T11:12:01.857Z"
+      "type": "income",
+      "createdAt": "2023-01-26T02:47:58.356Z",
+      "id": 7
     },
     {
-      "id": 2,
-      "description": "Aluguel de apartamento",
-      "type": "outcome",
+      "description": "Aluguel",
+      "price": 1200,
       "category": "Casa",
-      "price": 400,
-      "createdAt": "2022-04-10T11:12:01.857Z"
+      "type": "outcome",
+      "createdAt": "2023-01-26T02:48:14.475Z",
+      "id": 8
     },
     {
-      "id": 3,
       "description": "Hambúrguer",
-      "type": "outcome",
+      "price": 59,
       "category": "Alimentação",
-      "price": 20.3,
-      "createdAt": "2022-12-27T11:12:01.857Z"
-    },
-    {
-      "category": "Equipamentos",
-      "description": "Fone de ouvido",
-      "price": 360,
       "type": "outcome",
-      "createdAt": "2022-12-29T02:16:30.500Z",
-      "id": 4
-    },
-    {
-      "category": "Alimentação",
-      "description": "Janta",
-      "price": 29,
-      "type": "outcome",
-      "createdAt": "2022-12-29T02:18:55.135Z",
-      "id": 5
-    },
-    {
-      "description": "Identidade Visual Pulsatrix",
-      "price": 700,
-      "category": "Pulsatrix",
-      "type": "outcome",
-      "createdAt": "2022-12-29T02:41:42.802Z",
-      "id": 6
+      "createdAt": "2023-01-26T02:48:36.380Z",
+      "id": 9
     }
   ]
 }

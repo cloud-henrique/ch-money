@@ -10,8 +10,30 @@ export const TransactionsContainer = styled.main`
 export const TransactionsTable = styled.table`
   border-collapse: separate;
   border-spacing: 0 0.5rem;
+  margin-bottom: 2rem;
   margin-top: 1.5rem;
   width: 100%;
+
+  thead {
+    background: ${props => props.theme['gray-900']};
+    border-radius: 12px;
+
+    tr {
+      th {
+        padding: 1.25rem 2rem;
+        text-align: left;
+
+        &:first-child {
+          border-bottom-left-radius: 6px;
+          border-top-left-radius: 6px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 6px;
+          border-top-right-radius: 6px;
+        }
+      }
+    }
+  }
 
   td {
     background: ${props => props.theme['gray-700']};
@@ -25,6 +47,19 @@ export const TransactionsTable = styled.table`
     &:last-child {
       border-bottom-right-radius: 6px;
       border-top-right-radius: 6px;
+    }
+
+    button {
+      padding: 0.5rem;
+      transition: all 0.2s;
+
+      &:hover {
+        background: ${({ theme }) => theme['gray-600']};
+
+        svg {
+          stroke: ${({ theme }) => theme['red-300']};
+        }
+      }
     }
   }
 `

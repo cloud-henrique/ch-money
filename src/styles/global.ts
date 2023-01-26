@@ -23,10 +23,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
+    align-items: center;
     background: transparent;
     border-radius: 6px;
     border: 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 
     &:disabled {
       cursor: not-allowed;
