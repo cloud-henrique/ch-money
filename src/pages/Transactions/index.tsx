@@ -11,11 +11,11 @@ import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from './styles'
+import { DeleteTransactionModal } from '../../components/DeleteTransactionModal'
 
 export function Transactions() {
   const theme = useTheme()
   const transactions = useContextSelector(TransactionsContext, context => context.transactions)
-  const deleteTransaction = useContextSelector(TransactionsContext, context => context.deleteTransaction)
 
   return (
     <div>
@@ -51,14 +51,12 @@ export function Transactions() {
                 <td>
                   <Dialog.Root>
                     <Dialog.Trigger asChild>
-                      <button
-                        type="button"
-                        title="Excluir transação"
-                        onClick={() => deleteTransaction(String(transaction.id))}
-                      >
+                      <button type="button" title="Excluir transação">
                         <FiTrash2 color={theme['red-500']} size={24} />
                       </button>
                     </Dialog.Trigger>
+
+                    <DeleteTransactionModal transactionId={transaction.id} />
                   </Dialog.Root>
                 </td>
               </tr>

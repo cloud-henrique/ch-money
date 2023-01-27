@@ -1,28 +1,12 @@
 {
   "transactions": [
     {
-      "description": "Computador",
-      "price": 5400,
-      "category": "Venda",
-      "type": "income",
-      "createdAt": "2023-01-26T02:47:58.356Z",
-      "id": 7
-    },
-    {
       "description": "Aluguel",
       "price": 1200,
       "category": "Casa",
       "type": "outcome",
       "createdAt": "2023-01-26T02:48:14.475Z",
       "id": 8
-    },
-    {
-      "description": "Hambúrguer",
-      "price": 59,
-      "category": "Alimentação",
-      "type": "outcome",
-      "createdAt": "2023-01-26T02:48:36.380Z",
-      "id": 9
     }
   ]
 }

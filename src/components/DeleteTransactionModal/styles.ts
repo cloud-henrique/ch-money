@@ -20,35 +20,15 @@ export const Content = styled(Dialog.Content)`
   top: 50%;
   transform: translate(-50%, -50%);
 
-  form {
+  p {
+    margin: 2rem 0 1rem 0;
+  }
+
+  span {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-
-    input {
-      background: ${({ theme }) => theme['gray-900']};
-      color: ${({ theme }) => theme['gray-300']};
-      padding: 1rem;
-
-      &::placeholder {
-        color: ${({ theme }) => theme['gray-500']};
-      }
-    }
-
-    button[type='submit'] {
-      background: ${({ theme }) => theme['green-500']};
-      color: ${({ theme }) => theme.white};
-      font-weight: bold;
-      height: 58px;
-      margin-top: 1.5rem;
-      padding: 0 1.25rem;
-      transition: all 0.2s;
-
-      &:not(:disabled):hover {
-        background: ${({ theme }) => theme['green-700']};
-      }
-    }
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
   }
 `
 
@@ -58,4 +38,34 @@ export const CloseButton = styled(Dialog.Close)`
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
+`
+
+export const ConfirmButton = styled.button`
+  background: ${({ theme }) => theme['green-500']};
+  color: ${({ theme }) => theme.white};
+  font-weight: bold;
+  height: 48px;
+  margin-top: 1.5rem;
+  padding: 0 1.25rem;
+  transition: all 0.2s;
+
+  &:not(:disabled):hover {
+    background: ${({ theme }) => theme['green-700']};
+  }
+`
+
+export const CancelButton = styled(Dialog.Close)`
+  background: transparent;
+  border: ${({ theme }) => `1px solid ${theme['red-300']}`};
+  color: ${({ theme }) => theme['red-300']};
+  font-weight: bold;
+  height: 48px;
+  margin-top: 1.5rem;
+  padding: 0 1.25rem;
+  transition: all 0.2s;
+
+  &:not(:disabled):hover {
+    color: ${({ theme }) => theme['red-500']};
+    border: ${({ theme }) => `1px solid ${theme['red-500']}`};
+  }
 `
